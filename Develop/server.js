@@ -14,26 +14,6 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const notes = [
-  {
-    id: 1,
-    name: "Reggie",
-    age: 33,
-    status: "active",
-  },
-  {
-    id: 2,
-    name: "Amy",
-    age: 23,
-    status: "active",
-  },
-  {
-    id: 3,
-    name: "Leslie",
-    age: 19,
-    status: "active",
-  },
-];
 
 // SET PUBLIC FOLDER TO STATIC
 app.use(express.static("public"));
