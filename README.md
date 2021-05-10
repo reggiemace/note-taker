@@ -10,8 +10,6 @@ This application allows a user to enter notes to an html page.
 
 This application runs on the heroku server
 
-The walk through vide can be seen here: https://youtu.be/2GRuyqOPH0s
-
 ## License
 
 This application is license through MIT. You can find more out more about the license at : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT).
