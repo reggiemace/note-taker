@@ -58,14 +58,20 @@ app.post("/api/notes", (req, res) => {
 
   fs.writeFile("./db/db.json", JSON.stringify(db), (err) => {
     console.log(err);
-    clear;
   });
   res.status(200).send(data.id);
 });
 // DELETE A NOTE
-app.get('api/notes/:id', (req, res) => {
-  
-})
+app.delete("/api/notes/:id", (req, res) => {
+  const deleteNoteID = req.params.id;
+  const updatedDB = db.filter((deleteNote) => deleteNote.id !== deleteNoteID);
+  console.log(updatedDB);
+
+  fs.writeFile("./db/db.json", JSON.stringify(updatedDB), (err) => {
+    console.log(err);
+  });
+  res.end();
+});
 
 app.listen(PORT, () =>
   console.log(`Server is listening on port: http://localhost:${PORT}`)
